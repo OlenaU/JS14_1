@@ -38,35 +38,37 @@ for (let i = 0; i <= incomearr.length-1; i++)
                else if 
                    (incomeded >= incomearr[0] && incomeded <= incomearr[1]) // 9951-40525
                 {    
-                   let multiply = incomearr[0]*taxarr[0] + (incomeded - incomearr[0])*taxarr[1]; //995 + 12% 
+                   let multiply = incomearr[0]*taxarr[0] + (incomeded - incomearr[0])*taxarr[1]; //995 + 12%   3669
                    console.log(multiply);  
                    let total = income - multiply;
                    Taxresult.innerHTML = (multiply);
                    Totalincome.innerHTML = (total);
-                   
+                   return;   
                 }
+                
             
                 else if
                        
-                    (incomeded >= incomearr[1] && incomeded <= incomearr[2]) // 40526-86375
+                   (incomeded >= incomearr[1] && incomeded <= incomearr[2]) // 40526-86375     
                 {
-                   let multiply =  incomearr[0]*taxarr[0] + (incomeded - incomearr[0])*taxarr[1] +  (incomeded - incomearr[1])*taxarr[2] ;//995+3669 (or4664$) +22% 10087
+                   let multiply =   incomearr[0]*taxarr[0] +  (incomearr[1]-incomearr[0])*taxarr[1] + (incomeded - incomearr[1])*taxarr[2] ;//
                    console.log(multiply);  
                    let total = income - multiply;
                    Taxresult.innerHTML = (multiply);
                    Totalincome.innerHTML = (total);
-          
+                   return;          
 
                 }
                 else if
                 
                 (incomeded >= incomearr[2] && incomeded <= incomearr[3])    //86376 -164926
                 {
-                let multiply =  14751 + (incomeded - incomearr[2])*taxarr[3] // (10087+4664) or 14751 + 24%  
+                let multiply =  incomearr[0]*taxarr[0] + (incomearr[1]-incomearr[0])*taxarr[1] + (incomearr[2] - incomearr[1])*taxarr[2] + (incomeded - incomearr[2])*taxarr[3] // (10087+4664) or 14751 + 24%  
                 let total = income - multiply;
                 console.log(multiply);
                 Taxresult.innerHTML = (multiply);
                 Totalincome.innerHTML = (total);
+                return;
 
             }
             else if
@@ -78,6 +80,7 @@ for (let i = 0; i <= incomearr.length-1; i++)
                 console.log(multiply);
                 Taxresult.innerHTML = (multiply);
                 Totalincome.innerHTML = (total);
+                return;
 
             }
 
@@ -90,6 +93,7 @@ for (let i = 0; i <= incomearr.length-1; i++)
             console.log(multiply);
             Taxresult.innerHTML = (multiply);
             Totalincome.innerHTML = (total);
+            return;
 
         }
         else 
@@ -101,6 +105,7 @@ for (let i = 0; i <= incomearr.length-1; i++)
             console.log(multiply);
             Taxresult.innerHTML = (multiply);
             Totalincome.innerHTML = (total);
+            return;
 
         }
 
